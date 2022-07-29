@@ -1,5 +1,6 @@
 import 'package:dropdown_button2/custom_dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class IntroPage2 extends StatefulWidget {
   const IntroPage2({Key? key}) : super(key: key);
@@ -29,6 +30,13 @@ class _IntroPage2State extends State<IntroPage2> {
           mainAxisAlignment: MainAxisAlignment.center,
 
           children: [
+            SizedBox(height: 20,),
+            Center(
+              child: Lottie.asset('assets/second.json',
+                height: MediaQuery.of(context).size.height/4,
+                width: MediaQuery.of(context).size.width/1,),
+            ),
+            SizedBox(height: 30,),
             Text("Select Section",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
             SizedBox(height: 30,),
             Center(
@@ -47,7 +55,7 @@ class _IntroPage2State extends State<IntroPage2> {
                 },
               ),
             ),
-            SizedBox(height: 450,),
+          Spacer(),
           ],
         ),
       ),

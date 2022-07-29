@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class IntroPage3 extends StatefulWidget {
   const IntroPage3({Key? key}) : super(key: key);
@@ -17,8 +18,15 @@ class _IntroPage3State extends State<IntroPage3> {
           mainAxisAlignment: MainAxisAlignment.center,
 
           children: [
-            Center(child: Text("Welcome",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),)),
-
+            SizedBox(height: 20,),
+            Center(
+              child: Lottie.asset('assets/thard.json',
+                height: MediaQuery.of(context).size.height/3,
+                width: MediaQuery.of(context).size.width/1,),
+            ),
+            SizedBox(height: 20,),
+            Center(child: Text("Welcome",style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),)),
+            Spacer(),
           ],
         ),
       ),

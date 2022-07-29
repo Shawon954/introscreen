@@ -1,5 +1,6 @@
 import 'package:dropdown_button2/custom_dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class IntroScreen1 extends StatefulWidget {
   const IntroScreen1({Key? key}) : super(key: key);
@@ -32,6 +33,13 @@ class _IntroScreen1State extends State<IntroScreen1> {
         mainAxisAlignment: MainAxisAlignment.center,
 
           children: [
+            
+            Center(
+              child: Lottie.asset('assets/fast.json',
+                height: MediaQuery.of(context).size.height/3,
+                width: MediaQuery.of(context).size.width/1,),
+            ),
+            
             Text("Select Batch",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
            SizedBox(height: 30,),
             Center(
@@ -53,7 +61,7 @@ class _IntroScreen1State extends State<IntroScreen1> {
                 },
               ),
             ),
-            SizedBox(height: 450,),
+           Spacer(),
           ],
         ),
       ),
