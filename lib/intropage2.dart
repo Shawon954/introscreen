@@ -51,6 +51,7 @@ class _IntroPage2State extends State<IntroPage2> {
                 onChanged: (value) {
                   setState(() {
                     selectedSection = value;
+                    print(selectedSection);
                   });
                 },
               ),

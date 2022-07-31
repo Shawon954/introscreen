@@ -3,6 +3,7 @@ import 'package:introscreen/homepage.dart';
 import 'package:introscreen/intropage1.dart';
 import 'package:introscreen/intropage2.dart';
 import 'package:introscreen/intropage3.dart';
+import 'package:introscreen/introscreen0.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -29,13 +30,15 @@ class _OnBordingState extends State<OnBording> {
             controller: _controller,
            onPageChanged: (index){
                setState((){
-                 LastPage = (index == 2);
+                 LastPage = (index == 3);
                });
            },
            children: [
+             Department(),
              IntroScreen1(),
              IntroPage2(),
              IntroPage3(),
+
            ],
           ),
           Container(
@@ -48,7 +51,7 @@ class _OnBordingState extends State<OnBording> {
                   effect:JumpingDotEffect(
                     activeDotColor: Colors.white,
                   ),
-                    controller: _controller, count: 3),
+                    controller: _controller, count: 4),
 
                 LastPage? GestureDetector(
                      onTap: (){
